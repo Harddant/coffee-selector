@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+
+.hero {
+    display: flex;
+    height: 100vh;
+    background-image: url(../Assets/fontpage.jpg);
+    background-size: cover;
+    box-shadow: inset 0 0 0 12000px rgba(0, 0, 0, 0.4);
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding-left: 70px;
+    padding-top: 100px;
+}
+
+.title {
+    color: #fefefe;
+    font-size: 6rem;
+    font-family: 'Playfair Display', sans-serif;
+    padding-top: 10px;
+}
+
+.header {
+    color: #fefefe;
+    font-size: 3rem;
+    font-family: 'Playfair Display', sans-serif;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.paragraph {
+    color: #fefefe;
+    font-size: 2rem;
+    font-family: 'Playfair Display', sans-serif;
+    margin: 1%;
+    margin-left: 0;
+}
+
+.scroll-btn {
+    background-color: #fefefe;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.20rem;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 70px;
+    margin-top: 2rem;
+    transition: transform 0,5s ease;
+}
+
+.scroll-btn:hover {
+    transform: translateY(-5px);
+}
