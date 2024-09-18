@@ -16,8 +16,10 @@ export const CoffeeSelector = () => {
             </section>
             
             <section className="picker">
-                <div className="coffee-info"></div>
-                <button className="picker-btn">Select your coffee!</button>
+                <div className='wrapper'>
+                    <div className="coffee-info"></div>
+                    <button className="picker-btn">Select your coffee!</button>
+                </div>
             </section>
         </>
     );

@@ -59,3 +59,36 @@
 .scroll-btn:hover {
     transform: translateY(-5px);
 }
+
+.picker {
+    display: flex;
+    height: 100vh;
+    background-image: url(../Assets/secondpage.jpg);
+    background-size: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    width: 60vw;
+}
+
+.coffee-info {
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid red;
+}
+
+.picker-btn {
+    background-color: #fefefe;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.20rem;
+    
+}
