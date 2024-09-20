@@ -2,7 +2,14 @@ import React, { useState, useRef } from 'react'
 import './CoffeeSelector.css'
 import frontpage from '../Assets/fontpage.jpg'
 import secondpage from '../Assets/secondpage.jpg'
+
 export const CoffeeSelector = () => {
+    const scrollToPicker = () => {
+        const pickerSection = document.querySelector('.picker');
+        if (pickerSection) {
+            pickerSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <>
@@ -10,8 +17,8 @@ export const CoffeeSelector = () => {
                 <div className="container">
                     <h1 className="title">Coffee Selector</h1>
                     <h2 className="header">Pick your next best coffee</h2>
-                    <p className="paragraph">Click the button below and let it suprise you with a perfect bean choice.</p>
-                    <button className="scroll-btn">Click me</button>
+                    <p className="paragraph">Click the button below and let it surprise you with a perfect bean choice.</p>
+                    <button className="scroll-btn" onClick={scrollToPicker}>Click me</button>
                 </div>
             </section>
             
