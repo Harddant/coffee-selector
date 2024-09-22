@@ -1,7 +1,31 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, Component } from 'react'
 import './CoffeeSelector.css'
 import frontpage from '../Assets/fontpage.jpg'
 import secondpage from '../Assets/secondpage.jpg'
+
+class App extends Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [],
+            isLoaded: false,
+        }
+    }
+}
+
+componentDidMount() {
+    fetch("https://fake-coffee-api.vercel.app/api")
+        .then(res => res.json())
+        .then(json => {
+            this.setState({
+                isLoaded: true,
+                items: json,
+            })
+        });
+}
+
+
 
 export const CoffeeSelector = () => {
     const scrollToPicker = () => {
