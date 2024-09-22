@@ -1,33 +1,39 @@
-import React, { useState, useRef, Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import './CoffeeSelector.css'
-import frontpage from '../Assets/fontpage.jpg'
-import secondpage from '../Assets/secondpage.jpg'
-
-class App extends Component {
-    
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: [],
-            isLoaded: false,
-        }
-    }
-}
-
-componentDidMount() {
-    fetch("https://fake-coffee-api.vercel.app/api")
-        .then(res => res.json())
-        .then(json => {
-            this.setState({
-                isLoaded: true,
-                items: json,
-            })
-        });
-}
-
+import { CoffeeInfo } from './CoffeeInfo'
 
 
 export const CoffeeSelector = () => {
+    const [coffeeData, setCoffeeData] = useState([]);
+    const [randomNumber, setRandomNumber] = useState(0);
+  
+    const apiFilter = [0, 5, 6, 12, 15];
+
+    const generateRandomNumber = () => {
+      let newNumber = 0;
+      while (newNumber === randomNumber || apiFilter.includes(newNumber)) {
+        newNumber = Math.floor(1 + Math.random() * (20 - 1));
+      }
+      return newNumber;
+    }
+
+    async function getCoffeeData() {
+        const newNumber = generateRandomNumber();
+          setRandomNumber(newNumber);
+          const data = await fetch(`https://fake-coffee-api.vercel.app/api/${newNumber}`).then(response => response.json());
+          setCoffeeData(data[0]);
+    }
+  
+    useEffect(() => {
+      (async () => {
+        try {
+          await getCoffeeData();
+        } catch (err) {
+          console.log('Error occurred when fetching coffee data');
+        }
+      })();
+    }, []);
+    
     const scrollToPicker = () => {
         const pickerSection = document.querySelector('.picker');
         if (pickerSection) {
@@ -48,8 +54,8 @@ export const CoffeeSelector = () => {
             
             <section className="picker">
                 <div className='wrapper'>
-                    <div className="coffee-info"></div>
-                    <button className="picker-btn">Select your coffee!</button>
+                    <CoffeeInfo coffeeData={coffeeData} />
+                    <button className="picker-btn" onClick={() => getCoffeeData()}>Select your coffee!</button>
                 </div>
             </section>
         </>

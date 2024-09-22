@@ -79,10 +79,13 @@
 }
 
 .coffee-info {
-    width: 900px; 
-    height: 300px; 
-    border: 3px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 70vw; 
+    min-height: 600px; 
+    border: 3px solid #fefefe;
     margin-bottom: 1rem; 
+    padding: 0;
 }
 
 .picker-btn {
@@ -100,4 +103,48 @@
 
 .picker-btn:hover {
     transform: translateY(-5px);
+}
+
+.coffee-info-container {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #fefefe;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.coffee-info-img {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffee-img {
+    width: 500px;
+}
+
+.coffee-flavor-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.coffee-grind-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.coffee-flavor {
+    padding-right: 2rem;
+}
+
+.coffee-grind {
+    padding-right: 2rem;
+}
+
+.coffee-description {
+    height: 150px;
 }
