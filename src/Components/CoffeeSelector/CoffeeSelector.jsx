@@ -41,7 +41,7 @@ export const CoffeeSelector = () => {
         }
     };
 
-    return (
+    return ( 
         <>
             <section className="hero">
                 <div className="container">
@@ -53,10 +53,8 @@ export const CoffeeSelector = () => {
             </section>
             
             <section className="picker">
-                <div className='wrapper'>
-                    <CoffeeInfo coffeeData={coffeeData} />
-                    <button className="picker-btn" onClick={() => getCoffeeData()}>Select your coffee!</button>
-                </div>
+                <CoffeeInfo coffeeData={coffeeData} />
+                <button className="picker-btn" onClick={() => getCoffeeData()}>Select your coffee!</button>
             </section>
         </>
     );

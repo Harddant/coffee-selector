@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
 
+:root, html, body {
+    margin: 0;
+    padding: 0;
+}
+
 .hero {
     display: flex;
     height: 100vh;
@@ -62,29 +67,22 @@
 
 .picker {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     background-image: url(../Assets/secondpage.jpg);
     background-size: cover;
     box-shadow: inset 0 0 0 12000px rgba(0, 0, 0, 0.4);
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    width: 100vw; 
-    margin: 0; 
-}
-
 .coffee-info {
     display: flex;
     flex-direction: row;
-    width: 70vw; 
-    min-height: 600px; 
+    width: 70vw;
+    min-height: 60vh;
     border: 3px solid #fefefe;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
     padding: 0;
 }
 
@@ -101,6 +99,21 @@
     transition: transform 0,5s ease;
 }
 
+@media (max-width: 1024px) {
+    .picker-btn {
+        background-color: #fefefe;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        padding: 20px;
+        border: none;
+        cursor: pointer;
+        width: 200px;
+        height: 80px;
+        margin-top: 2.5rem;
+        transition: transform 0,5s ease;
+    }
+}
+
 .picker-btn:hover {
     transform: translateY(-5px);
 }
@@ -111,6 +124,17 @@
     font-size: 1.2rem;
     color: #fefefe;
     font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 1024px) {
+    .coffee-info-container {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 0.8rem;
+        color: #fefefe;
+        font-family: 'Courier New', Courier, monospace;
+        word-wrap: anywhere;
+    } 
 }
 
 .coffee-info-img {
@@ -124,17 +148,21 @@
 }
 
 .coffee-img {
-    width: 500px;
+    width: 33vw;
 }
 
 .coffee-flavor-container {
     display: flex;
     flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .coffee-grind-container {
     display: flex;
     flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .coffee-flavor {
@@ -146,5 +174,5 @@
 }
 
 .coffee-description {
-    height: 150px;
+    min-height: 10vh;
 }
