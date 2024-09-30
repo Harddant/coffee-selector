@@ -236,13 +236,13 @@
     .picker-btn {
         background-color: #fefefe;
         font-family: 'Courier New', Courier, monospace;
-        font-size: 1.3rem;
+        font-size: 0.8rem;
         padding: 16px;
         border: none;
         cursor: pointer;
-        width: 250px;
-        height: 100px;
-        margin-top: 3rem;
+        width: 160px;
+        height: auto;
+        margin-top: 2rem;
         transition: transform 0,5s ease;
     }
 }
