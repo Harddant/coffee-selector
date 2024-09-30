@@ -251,6 +251,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: auto;
         min-height: 100vh;
         background-image: url(../Assets/secondpage.jpg);
         background-size: cover;
