@@ -217,7 +217,7 @@
         width: 90vw;
         min-height: 60vh;
         border: 3px solid #fefefe;
-        margin-bottom: 1rem;
+        margin: 1rem 0;
         padding: 0;
     }
 
@@ -242,7 +242,7 @@
         cursor: pointer;
         width: 160px;
         height: auto;
-        margin-top: 2rem;
+        margin: 2rem 0;
         transition: transform 0,5s ease;
     }
 
