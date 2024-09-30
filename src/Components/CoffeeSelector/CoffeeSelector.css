@@ -99,21 +99,6 @@
     transition: transform 0,5s ease;
 }
 
-@media (max-width: 1024px) {
-    .picker-btn {
-        background-color: #fefefe;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 1rem;
-        padding: 20px;
-        border: none;
-        cursor: pointer;
-        width: 200px;
-        height: 80px;
-        margin-top: 2.5rem;
-        transition: transform 0,5s ease;
-    }
-}
-
 .picker-btn:hover {
     transform: translateY(-5px);
 }
@@ -124,17 +109,6 @@
     font-size: 1.2rem;
     color: #fefefe;
     font-family: 'Courier New', Courier, monospace;
-}
-
-@media (max-width: 1024px) {
-    .coffee-info-container {
-        width: 100%;
-        padding: 1.5rem;
-        font-size: 0.8rem;
-        color: #fefefe;
-        font-family: 'Courier New', Courier, monospace;
-        word-wrap: anywhere;
-    } 
 }
 
 .coffee-info-img {
@@ -175,4 +149,87 @@
 
 .coffee-description {
     min-height: 10vh;
+}
+
+@media (max-width: 1024px) {
+    .picker-btn {
+        background-color: #fefefe;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        padding: 20px;
+        border: none;
+        cursor: pointer;
+        width: 200px;
+        height: 80px;
+        margin-top: 2.5rem;
+        transition: transform 0,5s ease;
+    }
+
+    .coffee-info-container {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 0.8rem;
+        color: #fefefe;
+        font-family: 'Courier New', Courier, monospace;
+        word-wrap: anywhere;
+    } 
+}
+
+@media (max-width: 480px) {
+    .header {
+        color: #fefefe;
+        font-size: 2rem;
+        font-family: 'Playfair Display', sans-serif;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+
+    .title {
+        color: #fefefe;
+        font-size: 4.7rem;
+        font-family: 'Playfair Display', sans-serif;
+        padding-top: 5px;
+    }
+
+    .paragraph {
+        color: #fefefe;
+        font-size: 1rem;
+        font-family: 'Playfair Display', sans-serif;
+        margin: 1%;
+        margin-left: 0;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 0;
+        height: 100vh;
+    }
+
+    .coffee-info {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90vw;
+        min-height: 60vh;
+        border: 3px solid #fefefe;
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+
+    .coffee-img {
+        width: 80vw;
+    }
+
+    .coffee-info-container {
+        width: auto;
+        padding: 0px 14px;
+        font-size: 0.8rem;
+        color: #fefefe;
+        font-family: 'Courier New', Courier, monospace;
+    }
 }
