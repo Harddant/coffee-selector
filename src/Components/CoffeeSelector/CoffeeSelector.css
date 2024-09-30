@@ -232,4 +232,17 @@
         color: #fefefe;
         font-family: 'Courier New', Courier, monospace;
     }
+
+    .picker-btn {
+        background-color: #fefefe;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.3rem;
+        padding: 16px;
+        border: none;
+        cursor: pointer;
+        width: 250px;
+        height: 100px;
+        margin-top: 3rem;
+        transition: transform 0,5s ease;
+    }
 }
